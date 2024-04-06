@@ -22,4 +22,3 @@ spec:
     kind: GitRepository
     name: cat-repo
     namespace: flux-system
-  force: true
