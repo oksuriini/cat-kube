@@ -4,7 +4,7 @@ metadata:
   namespace: flux-system
   name: pod-creator
 rules:
-  - apiGroups: [, apps]
+  - apiGroups: ["", apps]
     resources: [pods, deployments, services, statefulsets]
     verbs: [create, get, list, delete, update, patch]
 ---
@@ -14,6 +14,6 @@ metadata:
   namespace: default
   name: pod-creator-def
 rules:
-  - apiGroups: [, apps]
+  - apiGroups: ["", apps]
     resources: [pods, deployments, services, statefulsets]
     verbs: [create, get, list, delete, update, patch]
