@@ -1,0 +1,27 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: pod-creator-binding
+  namespace: flux-system
+subjects:
+  - kind: ServiceAccount
+    name: tf-runner
+    namespace: flux-system
+roleRef:
+  kind: Role
+  name: pod-creator
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: pod-creator-binding-def
+  namespace: default
+subjects:
+  - kind: ServiceAccount
+    name: tf-runner
+    namespace: flux-system
+roleRef:
+  kind: Role
+  name: pod-creator-def
+  apiGroup: rbac.authorization.k8s.io
