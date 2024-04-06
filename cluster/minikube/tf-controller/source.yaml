@@ -22,5 +22,4 @@ spec:
     kind: GitRepository
     name: cat-repo
     namespace: flux-system
-  tfVarsFiles:
-    - example.tfvars
+  tfVarsFiles: ["example.tfvars"]
